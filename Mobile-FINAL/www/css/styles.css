@@ -1,0 +1,78 @@
+body {
+  background: url("images/back.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+
+}
+
+
+input[type=text] {
+
+  width: 87%;
+  left: 0%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  top: 50%; 
+  position: fixed
+}
+
+
+input::placeholder {
+    font-family: Roboto;
+    font-style: italic;
+    color: black;
+    font-size: 23px;
+    font-weight: 500;
+
+
+
+}
+
+
+
+
+.mag{
+   
+ background-color: #7C9A28;
+  width: 55px;
+  height: 43px;
+  top:50%;
+  right:0%;
+  transform: rotateY(180deg);
+  position: fixed;
+  
+}
+
+
+
+.nav{
+   
+    background-color: #7C9A28;
+    width: 55px;
+    height: 43px;
+    top:57%;
+    right:0%;
+    position: fixed;
+  
+}
+.GPS{
+    background-color: black;
+
+     top:55%;
+     right:13%;
+     position: fixed;
+     font-family: Roboto;
+    font-style: italic;
+    color: black;
+    font-size: 23px;
+    font-weight: 700;
+    color:white;
+   
+  
+}
+#after{
+    display: none
+}

@@ -1,0 +1,188 @@
+body, html{
+    height: 100%;
+    margin: 0;
+}
+
+
+h1{
+    font-size:40px;
+    font-weight: bold;
+    font-family: serif;
+    font-style: italic;
+}
+
+h3{
+    font-size:20px;
+    font-weight:bold;
+    font-family:serif;
+    font-style: italic;
+}
+
+#page {
+  height: 100%; width: 100%;
+    background-color:#FAF0E6;
+}
+#tdcontent {
+  height: 100%;
+}
+
+iframe{
+    width: 97%;
+    height: 97%;
+	margin: 5px 5px 5px 5px
+	
+}
+
+button{
+display: inline;
+  background-color: whitesmoke; 
+  border: none;
+  color:black;
+  font-size: 15px;
+  margin: 4px 2px;
+  cursor: pointer;
+  padding: 10px 24px;
+  box-shadow: 
+    
+}
+
+#weathertable{
+    background-color: #ffffff;
+    border-radius: 25px;
+    border: 1px solid black;
+    margin: 0 auto;
+    text-align:center;
+}
+
+#weathertabletr{
+    background-color: #ffffff;
+    border-radius: 25px;
+    font-weight: bold;
+    font-family: Tahoma;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 10px 0 10px 0;
+}
+
+#weathertabletd{
+    border-radius: 25px;
+    padding: 10px 10px 10px 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+
+#weathertabletr:nth-child(even) {
+    background-color: #c7bdc0;
+}
+
+#content {
+  font-family: Tahoma, 'sans-serif' ;
+  text-align:center;
+  background-color:#FAF0E6;
+  height:100%;
+  overflow: auto; /* or overflow: hidden; */
+}
+
+
+#home{
+    font-weight: bold;
+    font-size:20px;
+    width: 24%;
+    height: 20%;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    border: 0 0 0 0;
+}
+#map{
+    font-weight: bold;
+    font-size:20px;
+    width:25%;
+    height: 20%;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    border: 0 0 0 0;
+}
+
+
+#weather{
+    font-weight: bold;
+    font-size:20px;
+    width: 25%;
+    height: 20%;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    border: 0 0 0 0;
+}
+
+#currency{
+    font-size:20px;
+    font-weight: bold;
+    width: 24%;
+    height: 20%;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    border: 0 0 0 0;
+}
+
+body {margin: 0;}
+
+ul.sidenav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  background-color: #FAF0E6;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+ul.sidenav li button {
+  display: block;
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+ 
+ul.sidenav li button.active {
+  background-color: red;
+  color: black;
+}
+
+ul.sidenav li button:hover:not(.active) {
+  background-color: #FAF0E6;
+  color: black;
+}
+
+div.content {
+  margin-left: 25%;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 900px) {
+  ul.sidenav {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  
+  ul.sidenav li button {
+    float: left;
+    padding: 15px;
+  }
+  
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  ul.sidenav li button {
+    text-align: center;
+    float: none;
+  }
+}
+.btn:disabled:hover{
+    opacity: 0.6;
+  cursor: not-allowed;
+}
