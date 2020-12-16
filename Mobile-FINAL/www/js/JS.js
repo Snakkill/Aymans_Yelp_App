@@ -75,6 +75,9 @@ async function getInfo(){
                   
                     
                     document.getElementById("name1").textContent=(displayinfo.businesses[0].name);
+                        
+                    localStorage.setItem('name1', displayinfo.businesses[0].name); 
+
                     document.getElementById("rating1").textContent=(displayinfo.businesses[0].review_count);
                     document.getElementById("review_count1").textContent=(displayinfo.businesses[0].rating);
                      var distance=displayinfo.businesses[0].distance;
@@ -89,6 +92,8 @@ async function getInfo(){
                     localStorage.setItem('location1', coords);    
                         
                     document.getElementById("name2").textContent=(displayinfo.businesses[1].name);
+                         localStorage.setItem('name2', displayinfo.businesses[1].name); 
+
                     document.getElementById("rating2").textContent=(displayinfo.businesses[1].review_count);
                     document.getElementById("review_count2").textContent=(displayinfo.businesses[1].rating);
                      var distance=displayinfo.businesses[1].distance;
@@ -104,6 +109,8 @@ async function getInfo(){
                         
                         
                     document.getElementById("name3").textContent=(displayinfo.businesses[2].name);
+                         localStorage.setItem('name3', displayinfo.businesses[2].name); 
+
                     document.getElementById("rating3").textContent=(displayinfo.businesses[2].review_count);
                     document.getElementById("review_count3").textContent=(displayinfo.businesses[2].rating);
                     var distance=displayinfo.businesses[2].distance;
@@ -120,6 +127,7 @@ async function getInfo(){
                         
                         
                      document.getElementById("name4").textContent=(displayinfo.businesses[3].name);
+                         localStorage.setItem('name4', displayinfo.businesses[3].name); 
                     document.getElementById("rating4").textContent=(displayinfo.businesses[3].review_count);
                     document.getElementById("review_count4").textContent=(displayinfo.businesses[3].rating);
                     var distance=displayinfo.businesses[3].distance;
@@ -135,6 +143,7 @@ async function getInfo(){
                     localStorage.setItem('location4', coords);        
                         
                      document.getElementById("name5").textContent=(displayinfo.businesses[4].name);
+                    localStorage.setItem('name5', displayinfo.businesses[4].name); 
                     document.getElementById("rating5").textContent=(displayinfo.businesses[4].review_count);
                     document.getElementById("review_count5").textContent=(displayinfo.businesses[4].rating);
                     var distance=displayinfo.businesses[4].distance;
@@ -187,9 +196,81 @@ function getcords(){
         
           
 }
-      
-         
 
+function fav1(){
+     
+    var fav = localStorage.getItem('name1');
+    var counter=  localStorage.getItem('counter'); 
+     if (isNaN(counter) || counter==null)  {
+        counter=  '0'; 
+    }
+    counter=parseInt(counter);
+    alert(fav+" has been added to your favorite list")
+    localStorage.setItem(counter, fav); 
+    counter=counter+1;
+    counter=counter.toString();
+    localStorage.setItem('counter', counter);  
+    
+}
+        
+function fav2(){
+     
+    var fav = localStorage.getItem('name2');
+    var counter=  localStorage.getItem('counter'); 
+     if (isNaN(counter) || counter==null)  {
+        counter=  '0'; 
+    }
+    counter=parseInt(counter);
+    alert(fav+" has been added to your favorite list")
+    localStorage.setItem(counter, fav); 
+    counter=counter+1;
+    counter=counter.toString();
+    localStorage.setItem('counter', counter);  
+}
+
+function fav3(){
+     
+    var fav = localStorage.getItem('name3');
+    var counter=  localStorage.getItem('counter'); 
+     if (isNaN(counter) || counter==null)  {
+        counter=  '0'; 
+    }
+    counter=parseInt(counter);
+    alert(fav+" has been added to your favorite list")
+    localStorage.setItem(counter, fav); 
+    counter=counter+1;
+    counter=counter.toString();
+    localStorage.setItem('counter', counter);  
+}
+function fav4(){
+     
+    var fav = localStorage.getItem('name4');
+    var counter=  localStorage.getItem('counter'); 
+     if (isNaN(counter) || counter==null)  {
+        counter=  '0'; 
+    }
+    counter=parseInt(counter);
+    alert(fav+" has been added to your favorite list")
+    localStorage.setItem(counter, fav); 
+    counter=counter+1;
+    counter=counter.toString();
+    localStorage.setItem('counter', counter);  
+}
+function fav5(){
+     
+    var fav = localStorage.getItem('name5');
+    var counter=  localStorage.getItem('counter'); 
+     if (isNaN(counter) || counter==null)  {
+        counter=  '0'; 
+    }
+    counter=parseInt(counter);
+    alert(fav+" has been added to your favorite list")
+    localStorage.setItem(counter, fav); 
+    counter=counter+1;
+    counter=counter.toString();
+    localStorage.setItem('counter', counter);  
+    
+}
 
       
 
