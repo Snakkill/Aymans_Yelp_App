@@ -2,8 +2,6 @@
 
 
 
-
-
 document.addEventListener("deviceready", onDeviceReady, false);
     function onDeviceReady() {
         console.log("navigator.geolocation works well");
@@ -272,7 +270,113 @@ function fav5(){
     
 }
 
+function signin(){
+    
+    
+    
+    let workspace = document.getElementById("content");
+    workspace.innerHTML = "";
+   
+    var form = document.createElement("form");
+    var element1 = document.createElement("input"); 
+    var element2 = document.createElement("input");  
+
+    let h1 = document.createElement('h1');
+    let text = document.createTextNode("Sign-IN or Create a New Account!");
+    h1.appendChild(text);
+    
+    var linebreak = document.createElement("BR");
+    h1.appendChild(linebreak);
+    workspace.append(h1);
+    
+
+    form.appendChild(element1);  
+    workspace.appendChild(form);
+  
+    var linebreak = document.createElement("BR");
+    h1.appendChild(linebreak);
+    workspace.append(h1);
+    
+    form.appendChild(element2);
+    form.method = "POST";
+    h1.appendChild(linebreak);
+    
+    workspace.append(h1);
+    workspace.appendChild(form);
+
+   
+    var btn = document.createElement("BUTTON");  //submit button makes calls to login DB
+    btn.innerHTML = "Create Account";
+    btn.id = "CA";
+     
+  btn.addEventListener("click", function(e) {
+      url="https://lamp.cse.fau.edu/~dbenne11/whendiagram/add_user.php?username="+element1.value+"&pw="+element2.value;
+     alert(element1.value);
       
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+         displayinfo=JSON.parse(this.response);
+         alert(displayinfo.account_creation);
+          if(displayinfo.account_creation == "success") {
+         document.getElementById("home").disabled = false;
+         document.getElementById("map").disabled = false;
+         document.getElementById("weather").disabled = false;
+         document.getElementById("currency").disabled = false;
+         document.getElementById("myLogin").style.display = "none";
+         document.getElementById("mySignout").style.display = "block"; 
+       }
+    }
+};
+xhttp.open("GET", url, true);
+xhttp.send();
+      
+      
+});
 
+    workspace.append(btn);
+    
+    
+    var btn2 = document.createElement("BUTTON");  //submit button makes calls to login DB
+    btn2.innerHTML = "Sign-IN";
+    btn2.id = "SI";
+     
+  btn2.addEventListener("click", function(e) {
+      url="https://lamp.cse.fau.edu/~dbenne11/whendiagram/login.php?pw="+element2.value+"&username="+element1.value;
+     alert(element1.value);
+      
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+         displayinfo=JSON.parse(this.response);
+       if(displayinfo.login == "success") {
+         document.getElementById("home").disabled = false;
+         document.getElementById("map").disabled = false;
+         document.getElementById("weather").disabled = false;
+         document.getElementById("currency").disabled = false;
+         document.getElementById("myLogin").style.display = "none";
+         document.getElementById("mySignout").style.display = "block"; 
+       }
+    }
+};
+xhttp.open("GET", url, true);
+xhttp.send();
+      
+      
+});   
+    
 
+   workspace.append(btn2);  
+}      
+
+function signout(){
+    
+        document.getElementById("home").click(); 
+         document.getElementById("home").disabled = true;
+         document.getElementById("map").disabled = true;
+         document.getElementById("weather").disabled = true;
+         document.getElementById("currency").disabled = true;
+         document.getElementById("myLogin").style.display = "block";
+         document.getElementById("mySignout").style.display = "none"; 
+}
     

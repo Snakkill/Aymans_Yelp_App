@@ -61,8 +61,8 @@
                 <div id="header">
 
 <div class="app">
-			<button id="login" style="float: right">Sign in with Yahoo</button>
-        
+			<button id="myLogin" style="float: right" onclick="signin();">Sign in</button>
+         <div id="mySignout" style="display: none;" > <button  style="float: right" style="display: none;" onclick="signout();">Sign Out</button></div>  
                     </div>  
 
 
@@ -78,7 +78,12 @@
                    
     </ul>       
  
-                    
+     <script>
+         document.getElementById("home").disabled = true;
+         document.getElementById("map").disabled = true;
+         document.getElementById("weather").disabled = true;
+         document.getElementById("currency").disabled = true;
+    </script>               
                                 
             <div id="content">
             </div>

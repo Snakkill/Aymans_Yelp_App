@@ -52,7 +52,7 @@ var docurrency = function(){
         if (typeof(tempVal) != "undefined") { 
             
             if(tempVal){ 
-            //alert(tempVal);
+            
             temp.push(tempVal);
                        }
             
