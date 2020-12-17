@@ -1,4 +1,4 @@
-#Wed Dec 16 19:54:48 EST 2020
+#Thu Dec 17 14:46:19 EST 2020
 base.0=/Users/aymanmoubayed/Desktop/Mobile-FINAL/platforms/android/app/build/intermediates/dex/debug/mergeProjectDexDebug/classes.dex
 path.1=classes_0.dex
 renamed.1=classes2.dex
