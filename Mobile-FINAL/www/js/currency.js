@@ -39,7 +39,7 @@ var docurrency = function(){
     btn.id = x.toString();
      
   btn.addEventListener("click", function(e) {
-    alert("Button Id: " + this.id);
+    
     localStorage.removeItem(this.id);
     var x=0;
     counter=localStorage.getItem('counter'); //update list and counter
@@ -67,8 +67,7 @@ var docurrency = function(){
       
       localStorage.setItem('counter',counter.toString());
       while (x<counter){
-          alert(x.toString());
-          alert(temp[x]);
+          
           localStorage.setItem(x.toString(),temp[x]);
                       x=x+1;
        }   

@@ -2,7 +2,7 @@
 
 
 
-document.addEventListener("deviceready", onDeviceReady, false);
+document.addEventListener("deviceready", onDeviceReady, false); //location event listner 
     function onDeviceReady() {
         console.log("navigator.geolocation works well");
           navigator.geolocation.getCurrentPosition(onSuccess, onError,
@@ -11,8 +11,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
       
 
 var onSuccess = function(position) {
-        alert('Latitude: '          + position.coords.latitude          + '\n' +
-              'Longitude: '         + position.coords.longitude         + '\n'); };
+        };
 
 
     function onError(error) {
@@ -25,7 +24,7 @@ var onSuccess = function(position) {
 
 
 
-function hide(){
+function hide(){    //hides info
             var x = document.getElementById("input1");
             var y= document.getElementById("output")
             if (x.style.display === "none") 
@@ -162,7 +161,7 @@ async function getInfo(){
             xhr.open('GET', url);  
 
     
-            xhr.setRequestHeader("Authorization", "Bearer " + token);
+            xhr.setRequestHeader("Authorization", "Bearer " + token); // calls API and puts info into index html elements
             xhr.send();
                 
         var x = document.getElementById("input1");
@@ -174,7 +173,7 @@ async function getInfo(){
         }
 
 
-function getcords(){
+function getcords(){ //gets coords when nav button is pressed
      
     
      navigator.geolocation.getCurrentPosition(
@@ -195,7 +194,7 @@ function getcords(){
           
 }
 
-function fav1(){
+function fav1(){  //fav list takes into local storage 
      
     var fav = localStorage.getItem('name1');
     var counter=  localStorage.getItem('counter'); 
@@ -270,7 +269,7 @@ function fav5(){
     
 }
 
-function signin(){
+function signin(){ //sign in disables buttons if susscuful api request and log in or created account
     
     
     
@@ -311,14 +310,15 @@ function signin(){
      
   btn.addEventListener("click", function(e) {
       url="https://lamp.cse.fau.edu/~dbenne11/whendiagram/add_user.php?username="+element1.value+"&pw="+element2.value;
-     alert(element1.value);
+     
       
       var xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
          displayinfo=JSON.parse(this.response);
-         alert(displayinfo.account_creation);
+        
           if(displayinfo.account_creation == "success") {
+              alert("Your logged in!");
          document.getElementById("home").disabled = false;
          document.getElementById("map").disabled = false;
          document.getElementById("weather").disabled = false;
@@ -343,13 +343,14 @@ xhttp.send();
      
   btn2.addEventListener("click", function(e) {
       url="https://lamp.cse.fau.edu/~dbenne11/whendiagram/login.php?pw="+element2.value+"&username="+element1.value;
-     alert(element1.value);
+    
       
       var xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
          displayinfo=JSON.parse(this.response);
        if(displayinfo.login == "success") {
+           alert("Your logged in");
          document.getElementById("home").disabled = false;
          document.getElementById("map").disabled = false;
          document.getElementById("weather").disabled = false;
@@ -369,7 +370,7 @@ xhttp.send();
    workspace.append(btn2);  
 }      
 
-function signout(){
+function signout(){ //sign out disables buttons and unhides sign in button
     
         document.getElementById("home").click(); 
          document.getElementById("home").disabled = true;
