@@ -1,0 +1,3 @@
+Thank you for opening this readMe File.
+
+This is a great project I worked on that is meant to be viewed as a mobile app. It has the configurations to run on android and become an .apk file or as a mobile app to run on iPhone or any web browser (You may need adjust the viewing window of your web browser). This app is my custom Yelp app using the Yelp API. A user can sign in or create a new account that registers their username and password to my DB by an API. They can also save their favorite locations and view them on a map using the Google API. I also used PostMan to help me implement the many API's correctly. Hope you enjoy!
