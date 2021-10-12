@@ -32,24 +32,25 @@ var domap = function() { //This function should be used to build the map in the 
     ifrm5.setAttribute('width', '800');
     ifrm5.setAttribute('height', '1000'); 
     
-    
+    var google_key="YOUR KEY HERE"
+   
     var location1 = localStorage.getItem('location1');
-    ifrm.setAttribute('src', "https://www.google.com/maps/embed/v1/place?key=AIzaSyBMc9eQ-xBwLJCF03YOAm6N1bZzCOy9RjQ&q="+location1);  
+    ifrm.setAttribute('src', "https://www.google.com/maps/embed/v1/place?key=google_key+"="+location1);  
     workspace.append(ifrm);
     
     var location2 = localStorage.getItem('location2');
-    ifrm2.setAttribute('src', "https://www.google.com/maps/embed/v1/place?key=AIzaSyBMc9eQ-xBwLJCF03YOAm6N1bZzCOy9RjQ&q="+location2);  
+    ifrm2.setAttribute('src', "https://www.google.com/maps/embed/v1/place?key=google_key+"="+location2);  
     workspace.append(ifrm2);
     
     var location3 = localStorage.getItem('location3');
-    ifrm3.setAttribute('src', "https://www.google.com/maps/embed/v1/place?key=AIzaSyBMc9eQ-xBwLJCF03YOAm6N1bZzCOy9RjQ&q="+location3);  
+    ifrm3.setAttribute('src', "https://www.google.com/maps/embed/v1/place?key=google_key+"="+location3);  
     workspace.append(ifrm3);
     
     var location4 = localStorage.getItem('location4');
-    ifrm4.setAttribute('src', "https://www.google.com/maps/embed/v1/place?key=AIzaSyBMc9eQ-xBwLJCF03YOAm6N1bZzCOy9RjQ&q="+location4);  
+    ifrm4.setAttribute('src', "https://www.google.com/maps/embed/v1/place?key=google_key+"="+location4);  
     workspace.append(ifrm4);
     
     var location5 = localStorage.getItem('location5');
-    ifrm5.setAttribute('src', "https://www.google.com/maps/embed/v1/place?key=AIzaSyBMc9eQ-xBwLJCF03YOAm6N1bZzCOy9RjQ&q="+location5);  
+    ifrm5.setAttribute('src', "https://www.google.com/maps/embed/v1/place?key=google_key+"="+location5);  
     workspace.append(ifrm5);
 }
