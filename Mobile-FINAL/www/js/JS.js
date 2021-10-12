@@ -59,7 +59,7 @@ async function getInfo(){
             }
 
         
-           var token = "139SiL9OvyPI6q9jBUU5Kksv8a_P30YzcesJb3Phumcww10-ss3ymhnIm_CfeGeFB5q6bZo1GNv2fjdgTaLQfZNiMEwzBZCQpQV_lljWE50dGYLIq2yW1_zGX-fTX3Yx";
+           var token = "YELP TOKEN HERE";
                 
             var xhr = new XMLHttpRequest();
             xhr.onreadystatechange = function () {
